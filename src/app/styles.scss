@@ -1,0 +1,72 @@
+@import 'material';
+@import 'main';
+@import 'utils';
+@import 'responsive';
+@import './custom-purple-theme.scss';
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2') format('woff2');
+}
+
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+display: inline-block;
+white-space: nowrap;
+word-wrap: normal;
+direction: ltr;
+-webkit-font-feature-settings: 'liga';
+-webkit-font-smoothing: antialiased;
+}
+
+.mat-toolbar {
+    color: #fff;
+}
+
+.mat-dialog-container {
+    width: 60% !important;
+    position: relative;
+    left: 0%;
+}
+
+.live-red-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: red;
+    background: red;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes blinker {
+    50% {
+        background: transparent;
+    }
+}
+
+.blink_me {
+    animation: blinker 2s step-start infinite;
+}
+
+.button, .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+    letter-spacing: 1.3px !important;
+}
+
+html,
+body, html body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif !important;
+}

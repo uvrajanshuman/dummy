@@ -1,0 +1,27 @@
+.codeEditModal{
+    padding: 25px;
+    position: 'absolute';
+    left: '0px'
+}
+
+.inputEditor {
+    display: inline-block;
+    width: 100%;
+}
+
+.outputEditor {
+    display: inline-block; 
+    width: 100%; 
+    // margin-top: 10px;
+    // margin-left: 75px;
+    // float: left;
+}
+
+.runButton {
+    display: inline-block; 
+    margin-left: 75px;
+}
+
+.inputEditorBig {
+    width: 700px
+}

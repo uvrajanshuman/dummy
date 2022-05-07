@@ -1,0 +1,409 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$air-purple-theme: (50: #ede7f6,
+    100: #d1c4e9,
+    200: #b39ddb,
+    300: #9575cd,
+    400: #7e57c2,
+    500: #673ab7,
+    600: #5e35b1,
+    700: #512da8,
+    800: #4527a0,
+    900: #311b92,
+    A100: #b388ff,
+    A200: #7c4dff,
+    A400: #651fff,
+    A700: #6200ea,
+    contrast: (50: #ede7f6,
+        100: #d1c4e9,
+        200: #b39ddb,
+        300: #9575cd,
+        400: #7e57c2,
+        500: #673ab7,
+        600: #5e35b1,
+        700: #512da8,
+        800: #4527a0,
+        900: #311b92,
+        A100: #b388ff,
+        A200: #7c4dff,
+        A400: #651fff,
+        A700: #6200ea,
+    )
+);
+
+$white-color: #FFFFFF;
+$black-color: #000000;
+$purple-color: #320088;
+$medium-purple-color: #9575cd;
+$light-purple-color:#FBF8FF;
+$light100-purple-color:#d1c4e9;
+$light200-purple-color:#b39ddb;
+$sidebar-background-color: #FBF8FF;
+$primary-background-color: #673ab7;
+$primary-font-color: #020202;
+$primary-font-white-color: #FFFFFF;
+$primary-font-hover-color: #FBF8FF;
+$white-bg-color: rgb(255, 255, 255);
+$purple-font-color: #320088;
+
+$my-custom-primary: mat-palette($air-purple-theme);
+$my-custom-accent: mat-palette($mat-pink, 100, 500, A100);
+$my-custom-warn: mat-palette($mat-lime);
+
+$my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+$my-custom-theme: mat-dark-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);
+
+.mat-raised-button {
+    background-color: $primary-background-color;
+    color: $primary-font-hover-color;
+    min-width: 110px;
+    width: 110px;
+}
+
+.mat-menu-item {
+    color: $primary-font-white-color;
+
+    a {
+        color: $primary-font-white-color;
+    }
+}
+
+.mat-card,
+.mat-option,
+.mat-chip.mat-standard-chip,
+.mat-autocomplete-panel {
+    background-color: $white-bg-color;
+    color: $primary-font-color;
+}
+
+mat-icon.add-icon {
+    margin-right: 40px;
+    margin-top: 12px;
+    font-size: 35px;
+    text-shadow: 2px 2px #c7c7c7;
+}
+
+::ng-deep .mat-form-field-placeholder {
+    color: #908e90;
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder {
+    color: #908e90;
+}
+
+mat-sort-header-button {
+    letter-spacing: 0.5px;
+}
+
+.mat-input-element, .mat-paginator-page-size-label, .mat-paginator-range-label {
+    //For itemsper page text etc
+    color: $primary-font-color;
+}
+
+
+.mat-cell,.mat-footer-cell {
+    color: $primary-font-color;
+    font-weight: 400;
+}
+.mat-tab-label, .mat-tab-link,
+.mat-tab-label .mat-tab-label-content {
+    color: $purple-font-color;
+    font-weight: bold;
+}
+
+.mat-sort-header-container {
+    color: #320088;
+    font-size: 15px !important;
+    font-weight: bold;
+}
+
+
+.mat-card-header .mat-card-title {
+    color: #320088 !important;
+}
+
+.cards-list {
+
+    .mat-card-content {
+        letter-spacing: 0.5px;
+        font-size: 16px !important;
+    }
+}
+
+.mat-card-content {
+    font-size: 16px !important;
+    font-weight: 400;
+}
+
+.mat-error {
+    color: #f44336;
+    font-size: 14px;
+}
+
+
+.mat-form-field-flex {
+    border-bottom: 1.5px solid $primary-background-color;
+}
+
+.mat-focused .placeholder {
+    color:$primary-font-color !important;
+    opacity: 0.5 !important;
+}
+.mat-form-field-flex {
+    .mat-focused .placeholder {
+        color: $purple-font-color !important;
+        opacity: 0.5 !important;
+    }   
+}
+.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element, 
+.mat-form-field.mat-form-field-invalid .mat-form-field-label,
+.mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent, 
+.mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker,
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: $purple-font-color !important;
+    caret-color: $primary-font-color !important;
+}
+
+.mat-flat-button.mat-primary[disabled],
+.mat-flat-button.mat-accent[disabled],
+.mat-flat-button.mat-warn[disabled],
+.mat-flat-button[disabled][disabled],
+.mat-raised-button.mat-primary[disabled],
+.mat-raised-button.mat-accent[disabled],
+.mat-raised-button.mat-warn[disabled],
+.mat-raised-button[disabled][disabled],
+.mat-fab.mat-primary[disabled],
+.mat-fab.mat-accent[disabled],
+.mat-fab.mat-warn[disabled],
+.mat-fab[disabled][disabled],
+.mat-mini-fab.mat-primary[disabled],
+.mat-mini-fab.mat-accent[disabled],
+.mat-mini-fab.mat-warn[disabled],
+.mat-mini-fab[disabled][disabled] {
+    background-color: $primary-background-color;
+    color: $primary-font-white-color;
+    opacity: 0.5;
+}
+.mat-table {
+    
+    background: $white-bg-color;
+    mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+        border-bottom-color: #dfdfdf;
+    }
+}
+table.mat-table {
+    width: 100%;
+}
+
+.mat-option.mat-active {
+    background: $light-purple-color;
+    color: $black-color;
+    font-weight: bold;
+}
+.mat-chip.mat-standard-chip, .mat-autocomplete-panel {
+    background: $light-purple-color;
+    color: $black-color;
+}
+
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled),
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background: $light-purple-color;
+    color: $black-color;
+    font-weight: bold;
+}
+
+.mat-select-value {
+    color: $black-color;
+}
+
+.mat-button-wrapper {
+    color: $primary-font-white-color;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+    color: $black-color;
+    opacity: 0.4;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    opacity: 0.03 !important;
+    background-color: $light-purple-color !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $light-purple-color;
+}
+
+.mat-checkbox-frame {
+    background-color: $light-purple-color;
+}
+
+.mat-checkbox-inner-container {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin {
+    .mat-checkbox-frame {
+        background-color: $light200-purple-color;
+    }
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $light200-purple-color;    
+}
+.mat-icon-button {
+
+    .mat-button-wrapper {
+        color: $purple-color;
+    }
+}
+
+.mat-dialog-container {
+    background: $light-purple-color;
+    color: $black-color;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mat-slide-toggle-bar {
+    background-color: $light-purple-color; //rgba(220, 220, 220, 0.5);
+}
+
+.mat-paginator {
+    background-color: $light-purple-color;
+}
+
+.mat-toolbar.mat-primary {
+    color: $white-color
+}
+
+.active {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 1023px) {
+    body, div { 
+      font-size: 12px !important;
+    }
+    th {
+      font-size: 12px !important;
+    }
+    h5 {
+      font-size: 14px !important;
+    }
+    h2 {
+      font-size: 22px !important;
+    }
+    h6 {
+      font-size: 12px !important;
+    }
+    td{
+      font-size: 12px !important;
+    }
+    input.form-control::placeholder {
+      font-size: 12px !important;
+    }
+}
+  
+@media only screen and (min-width: 1365px) {
+body, div { 
+    font-size: 14px !important;
+}
+th {
+    font-size: 14px !important;
+}
+h5 {
+    font-size: 18px !important;
+}
+h6 {
+    font-size: 13px !important;
+}
+h2 {
+    font-size: 28px !important;
+}
+td {
+    font-size: 14px !important;
+}
+input.form-control::placeholder {
+    font-size: 14px !important;
+}
+@media only screen and (min-width: 1600px) {
+    body, div { 
+    font-size: 16px !important;
+    }
+    th.mat-header-cell {
+    font-size: 14px !important;
+    }
+    td.mat-cell {
+    font-size: 14px !important;
+    }
+}
+}
+.primary-theme-text {
+    color: $primary-background-color;
+    font-weight: bold;
+}
+
+.mat-expansion-panel {
+background: $light-purple-color;
+color: $black-color;
+}
+.mat-expansion-panel-header-title {
+color: $primary-background-color;
+}
+
+.mat-raised-button.mat-warn {
+background: red !important;
+color: $black-color
+}
+
+.mat-accordion .mat-expansion-panel:not(.mat-expanded), .mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+margin-bottom: 15px;
+}
+
+.mat-raised-secondary-button {
+    background: #efe6ff !important;
+    color: #000 !important;
+}
+
+.mat-raised-button.cancel-btn {
+    background: #f1f1f1 !important;
+    .mat-button-wrapper {
+        color: #000000 !important;
+    }
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, 
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), 
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, 
+.mat-radio-button.mat-accent:active .mat-radio-persistent-ripple,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+ background-color: $primary-background-color;   
+}
+
+.mat-radio-outer-circle,
+.mat-checkbox-frame,
+.mat-checkbox .mat-ripple-element {
+    background-color: $light100-purple-color !important; // $light200-purple-color;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #b39ddb;
+}
+
+
+.mat-calendar-table {
+    .mat-calendar-body {
+        .mat-calendar-body-disabled {
+            .mat-calendar-body-cell-content {
+                color: #999999 !important;
+            }
+        }
+    }
+}

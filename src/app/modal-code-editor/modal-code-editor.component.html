@@ -1,0 +1,61 @@
+<div class="codeEditModal">
+  <div mat-dialog-actions align="center">
+    <button mat-raised-button class="RunButton" (click)="run()">
+      <i class="material-icons"> play_arrow </i>Run
+    </button>
+    <button mat-raised-button (click)="clear()">
+      <i class="material-icons"> delete </i>Clear
+    </button>
+    <button mat-raised-button (click)="close()">
+      <i class="material-icons"> close </i>Close
+    </button>
+  </div>
+  <div fxFlex style="text-align: right;">
+    <span
+      ><i style="font-size: 20px;" class="material-icons"
+        >play_circle_outline
+      </i></span
+    >
+  </div>
+  <div>
+    <h2 style="display: inline-block;">
+      <span [innerHTML]="question"></span>
+    </h2>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Select a language</mat-label>
+      <mat-select
+        [(value)]="inputEditorOptions.language"
+        (selectionChange)="onChangeDropdown()"
+      >
+        <mat-option *ngFor="let languages of languageList" [value]="languages"
+          >{{ languages }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-label>Input</mat-label>
+  </div>
+  <div>
+    <ngx-monaco-editor
+      class="inputEditor"
+      #monEditorInput
+      [options]="inputEditorOptions"
+      [(ngModel)]="inputCode"
+    ></ngx-monaco-editor>
+  </div>
+
+  <div style="margin-top: 5px;">
+    <mat-label>Output</mat-label>
+  </div>
+  <div>
+    <ngx-monaco-editor
+      class="outputEditor"
+      #monEditorOutput
+      [options]="outputEditorOptions"
+      [(ngModel)]="outputCode"
+    ></ngx-monaco-editor>
+  </div>
+</div>

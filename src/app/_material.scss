@@ -1,0 +1,116 @@
+
+@font-face {
+font-family: Lato-Light, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Lato/Lato-Light.woff2) format('woff2'), 
+    url(../assets/fonts/Lato/Lato-Light.woff) format('woff');
+ font-weight: 300;
+}
+
+
+@font-face {
+font-family: Lato, Lato-Regular, Helvetica, Arial, sans-serif;
+  src: url(../assets/fonts/Lato/Lato-Regular.woff2) format('woff2'), 
+    url(../assets/fonts/Lato/Lato-Regular.woff) format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+font-family: Lato-Bold, Helvetica, Arial, sans-serif;  
+  src: url(../assets/fonts/Lato/Lato-Bold.woff2) format('woff2'), 
+    url(../assets/fonts/Lato/Lato-Bold.woff) format('woff');
+   font-weight: 700;
+  }
+
+@font-face {
+   font-family: Lato-Thin, Helvetica, Arial, sans-serif;
+     src: url(../assets/fonts/Lato/Lato-Thin.woff2) format('woff2'),
+      url(../assets/fonts/Lato/Lato-Thin.woff) format('woff');
+     font-weight: 200;
+}
+
+
+@font-face {
+   font-family: Roboto-Black, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Black.ttf) format('truetype');
+}
+ 
+@font-face {
+   font-family: Roboto-BlackItalic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-BlackItalic.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Bold, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Bold.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-BoldItalic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-BoldItalic.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Italic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Italic.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Light, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Light.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-LightItalic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-LightItalic.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Medium, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-MediumItalic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-MediumItalic.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Regular, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Regular.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-Thin, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-Thin.ttf) format('ttf');
+}
+
+@font-face {
+   font-family: Roboto-ThinItalic, Helvetica, Arial, sans-serif;
+   src: url(../assets/fonts/Roboto/Roboto-ThinItalic.ttf) format('ttf');
+}
+
+
+
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+   $font-family: 'Roboto, RobotoDraft, Helvetica, Arial, sans-serif', 
+   $headline: mat-typography-level(32px,  48px,  700), 
+   $body-1: mat-typography-level(16px,  24px,  300)
+);
+
+
+@include angular-material-typography($custom-typography);
+
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+   $font-family: 'Roboto, RobotoDraft, Helvetica, Arial, sans-serif', 
+   $headline: mat-typography-level(32px,  48px,  700), 
+   $body-1: mat-typography-level(16px,  24px,  300)
+);
+
